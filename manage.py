@@ -1,6 +1,9 @@
 import docker
+import os
 
-client = docker.from_env(environment={'DOCKER_HOST': 'tcp://34.71.202.90:2375'})
+
+docker_host = os.environ.get('DOCKER_HOST')
+client = docker.from_env(environment={'DOCKER_HOST': docker_host})
 
 
 def list_containers():
