@@ -9,4 +9,4 @@ services:
       - .:/app
     environment:
       FLASK_ENV: development
-      DOCKER_HOST: tcp://34.71.202.90:2375
+      DOCKER_HOST: $REMOTE_DOCKER_HOST
